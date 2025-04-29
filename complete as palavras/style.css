@@ -1,0 +1,326 @@
+/* Estilo geral responsivo */
+body {
+    font-family: 'Comic Sans MS', 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: background-image 1s ease-in-out; /* Transição suave ao trocar a imagem */
+    background-color: #ffebcd;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+/* Tema Rosa */
+body.theme-pink {
+    background-color: #ffe4e1; /* Rosa claro */
+    color: #ff69b4; /* Rosa vibrante */
+}
+
+#game-container.theme-pink {
+    background-color: #fffacd; /* Amarelo claro */
+    border: 4px dashed #ff69b4; /* Borda rosa vibrante */
+}
+
+/* Tema Azul */
+body.theme-blue {
+    background-color: #e0f7fa; /* Azul claro */
+    color: #007bb5; /* Azul vibrante */
+}
+
+#game-container.theme-blue {
+    background-color: #e0f7fa; /* Azul claro */
+    border: 4px dashed #007bb5; /* Borda azul vibrante */
+}
+
+header.theme-blue h1 {
+    color: #007bb5; /* Azul vibrante */
+    text-shadow: 2px 2px #005f8a; /* Sombra azul escuro */
+}
+
+header.theme-blue p {
+    color: #005f8a; /* Azul escuro */
+}
+
+#word-to-complete.theme-blue {
+    color: #007bb5; /* Azul vibrante */
+}
+
+#user-input.theme-blue {
+    border: 2px solid #007bb5; /* Borda azul */
+}
+
+#submit-button.theme-blue {
+    background-color: #007bb5; /* Azul vibrante */
+    color: white;
+}
+
+#submit-button.theme-blue:hover {
+    background-color: #005f8a; /* Azul mais escuro ao passar o mouse */
+}
+
+footer.theme-blue {
+    background-color: #007bb5; /* Azul vibrante */
+    color: white;
+}
+
+#feedback-message.theme-blue.correct {
+    color: #32cd32; /* Verde vibrante para acerto */
+}
+
+#feedback-message.theme-blue.wrong {
+    color: #ff4500; /* Laranja vibrante para erro */
+}
+
+/* Cabeçalho */
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+header h1 {
+    font-size: 3rem;
+    color: firebrick; /* Rosa vibrante */
+    margin: 0;
+    text-shadow: 2px 2px #ffa07a; /* Sombra laranja */
+}
+
+header p {
+    font-size: 1.5rem;
+    color: #ff4500; /* Laranja vibrante */
+}
+
+/* Ajuste do container do jogo */
+#game-container {
+    width: 90%; /* Ajusta a largura para caber em telas menores */
+    max-width: 600px; /* Limita a largura máxima */
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Palavra a ser completada */
+#word-to-complete {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    flex-wrap: wrap; /* Permite que as letras quebrem linha em telas pequenas */
+}
+
+#word-to-complete .letter {
+    width: 40px;
+    height: 50px;
+    font-size: 1.5rem;
+    text-align: center;
+    line-height: 50px;
+    border-bottom: 2px solid #333;
+    margin: 2px;
+}
+
+#word-to-complete .letter[contenteditable="true"] {
+    border-bottom: 2px dashed #ff4500; /* Espaço editável */
+    color: #ff4500;
+}
+
+#word-to-complete .letter.correct {
+    color: #32cd32; /* Verde para acerto */
+    border-bottom: 2px solid #32cd32;
+}
+
+#word-to-complete .letter.wrong {
+    color: #ff4500; /* Vermelho para erro */
+    border-bottom: 2px solid #ff4500;
+}
+
+/* Ícone da palavra */
+#word-icon {
+    display: block;
+    margin: 10px auto;
+    max-width: 100px;
+    height: auto;
+    border: 3px solid #ffa07a; /* Borda laranja */
+    border-radius: 10px;
+}
+
+/* Input e botão */
+#user-input {
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 80%; /* Ajusta a largura para telas menores */
+    max-width: 300px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#user-input:focus {
+    border-color: #ff4500; /* Laranja vibrante ao focar */
+}
+
+#submit-button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    width: 80%; /* Ajusta a largura para telas menores */
+    max-width: 300px;
+    margin: 10px auto;
+    background-color: yellow; /* Rosa vibrante */
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#submit-button:hover {
+    background-color: #ff4500; /* Laranja vibrante ao passar o mouse */
+}
+
+/* Ocultar seleção de tema após escolha */
+#theme-selection {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#theme-selection button {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#theme-pink {
+    background-color: #ff69b4;
+    color: white;
+}
+
+#theme-pink:hover {
+    background-color: #ff1493;
+}
+
+#theme-blue {
+    background-color: #007bb5;
+    color: white;
+}
+
+#theme-blue:hover {
+    background-color: #005f8a;
+}
+
+/* Feedback */
+#feedback-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+#feedback-message {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#feedback-message.correct {
+    color: #32cd32; /* Verde vibrante para acerto */
+}
+
+#feedback-message.wrong {
+    color: #ff4500; /* Laranja vibrante para erro */
+}
+
+/* Pontuação */
+#score-container {
+    font-size: 1.2rem;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Estilo do footer */
+footer {
+    background-color: chartreuse; /* Verde claro */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 1rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+.hidden {
+    display: none; /* Oculta o elemento */
+}
+
+/* Media Queries para dispositivos menores */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Reduz o tamanho do título */
+    }
+
+    #game-container {
+        padding: 15px;
+    }
+
+    #word-to-complete .letter {
+        width: 30px;
+        height: 40px;
+        font-size: 1.2rem;
+        line-height: 40px;
+    }
+
+    #user-input, #submit-button {
+        font-size: 1rem;
+        padding: 8px;
+    }
+
+    #feedback-message {
+        font-size: 1rem;
+    }
+
+    #score-container {
+        font-size: 1rem;
+    }
+}
+
+/* Media Queries para dispositivos muito pequenos (celulares) */
+@media (max-width: 480px) {
+    #game-container {
+        padding: 10px; /* Reduz o espaçamento interno */
+    }
+
+    #word-to-complete .letter {
+        width: 25px; /* Reduz a largura das letras */
+        height: 35px; /* Reduz a altura das letras */
+        font-size: 1rem; /* Reduz o tamanho da fonte */
+        line-height: 35px; /* Ajusta o alinhamento vertical */
+    }
+
+    #user-input, #submit-button {
+        font-size: 0.9rem; /* Reduz o tamanho da fonte */
+        padding: 6px; /* Reduz o espaçamento interno */
+    }
+
+    #feedback-message {
+        font-size: 0.9rem; /* Reduz o tamanho do texto de feedback */
+    }
+
+    #score-container {
+        font-size: 0.9rem; /* Reduz o tamanho do texto da pontuação */
+    }
+}
+

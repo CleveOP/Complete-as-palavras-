@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete as Palavras</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Complete as Palavras</h1>
+        
+    </header>
+    
+    <!-- Escolha de tema -->
+    <div id="theme-selection">
+        <h2>Escolha o tema:</h2>
+        <button id="theme-pink">Tema Rosa</button>
+        <button id="theme-blue">Tema Azul</button>
+    </div>
+
+    <!-- Jogo (oculto inicialmente) -->
+    <main id="game-container" style="display: none;">
+        <p id="word-to-complete">_ a s a</p>
+        <img id="word-icon" src="" alt="Ícone da palavra" />
+        <input type="text" id="user-input" placeholder="">
+        <button id="submit-button"></button>
+    </main>
+
+    <div id="feedback-container">
+        <p id="feedback-message"></p>
+    </div>
+    
+    <div id="score-container">
+        <p>Pontuação: <span id="score">0</span></p>
+    </div>
+    
+    <footer>
+        <p>Desenvolvido por Cleverson de Oliveira Pereira - © 2025</p>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
